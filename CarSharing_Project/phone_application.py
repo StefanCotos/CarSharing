@@ -379,6 +379,7 @@ class CarSharingApp:
         if response.json().get("success", False):
             messagebox.showinfo("Payment", f"Payment of ${amount} successful!\n"
                                            f"Thank you for using our service.")
+            sleep(2)
             self.created_subprocess.terminate()
             self.current_car_id = None
             self.create_location_screen()
